@@ -8,7 +8,7 @@ from telebot import types
 
 
 API_TOKEN = "XXXXXXXXXX:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"     # токен бота
-user_id = 000000000     # id администратора
+user_id = 000000000     # id администратора (administrator)
 no_admin_enabled = False    #вход с любого user_id
 active_tunnel = False       #флаг активного туннеля
 
