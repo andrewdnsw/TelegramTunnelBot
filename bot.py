@@ -49,10 +49,14 @@ bot = telebot.TeleBot(API_TOKEN)
 @bot.message_handler(commands=["start"])
 def cmd_start(message):
     global state
-    if (user_id == message.chat.id) or (no_admin_enabled):  # проверяем, что пишет именно владелец
-        bot.send_message(message.chat.id, "Привет! Я Бот помощник 😊\nКак я могу к тебе обращаться?")
-        state = 1
-        print(state)
+    global active_tunnel
+    if (user_id == message.chat.id) or (no_admin_enabled):     # проверяем, что пишет именно владелец
+        if (active_tunnel == True):
+            bot.send_message(message.chat.id, "Необходимо разорвать текущие подключения прежде чем начать сначала.\nПравила Информационной Безопасности запрещают оставлять открытые туннельные соединения!\nВведи /terminate - Это закроет туннель IPSec.")
+        else:
+            bot.send_message(message.chat.id, "Привет! Я Бот помощник 😊\nКак я могу к тебе обращаться?")
+            state = 1
+            print(state)
     else:
         bot.send_message(message.from_user.id, "В детстве мне говорили, что плохо отвечать незнакомцам ...\nПростите😅")
         print('Not registered detected')
