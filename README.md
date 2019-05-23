@@ -1,7 +1,9 @@
 # TelegramTunnelBot
 # IPSecTunnel
-Bot for Telegram that makes generate IPSec Tunnels on ZyXEL through SSH
-Bot running on Russian language. Bot protection used 'user_id' access so paste it in this code in necessary or use 'no_admin_enabled' flag.
+Bot for Telegram that makes generate IPSec Tunnels on ZyXEL through SSH.
+
+Bot responds in Russian. 
+Bot protection used 'user_id' access so paste it in this code in necessary or use 'no_admin_enabled' flag.
 
 ### How to use
 
